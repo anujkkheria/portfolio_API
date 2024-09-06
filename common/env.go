@@ -8,7 +8,7 @@ import (
 
 func LoadEnv() error {
 	// check if prod
-	prod := os.Getenv("PROD")
+	prod := os.Getenv("MONGO_URI")
 
 	if prod != "true" {
 		err := godotenv.Load()
